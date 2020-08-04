@@ -1,0 +1,10 @@
+@media (max-width: 1200px) {
+  .float-left {
+    top: auto;
+  }
+
+  .portfolio {
+    padding: 100px 10%;
+    height: auto;
+  }
+}
