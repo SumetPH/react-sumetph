@@ -1,12 +1,12 @@
-import React, { useEffect, useState, Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Loading from "./components/Loading";
 
 // import Home from "./pages/Home";
 // import Portfolio from "./pages/Portfolio";
 
-const Home = React.lazy(() => import("./pages/Home"));
-const Portfolio = React.lazy(() => import("./pages/Portfolio"));
+const Home = lazy(() => import("./pages/Home"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
 
 function App() {
   // const [initial, setInitial] = useState(false);
@@ -22,8 +22,8 @@ function App() {
   // }
 
   return (
-    <Suspense fallback={<Loading />}>
-      <Router>
+    <Router>
+      <Suspense fallback={<Loading />}>
         <div className="nav">
           <ul className="nav-list">
             <li>
@@ -53,8 +53,8 @@ function App() {
             <Portfolio />
           </Route>
         </Switch>
-      </Router>
-    </Suspense>
+      </Suspense>
+    </Router>
   );
 }
 
