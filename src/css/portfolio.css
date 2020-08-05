@@ -1,6 +1,5 @@
 .portfolio {
   padding: 100px 20%;
-  height: 100vh;
 }
 
 .img {
@@ -13,15 +12,18 @@
 }
 
 .box {
+  overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%;
   padding-top: 56.25%;
   background-size: cover;
-  overflow: hidden;
+  border-radius: 18px;
+  text-align: center;
+  z-index: 2;
+  /* border: 2px solid #34495e; */
 }
 
-.cover {
+.box-cover {
   top: 100%;
   position: absolute;
   height: 100%;
@@ -35,17 +37,30 @@
   align-items: center;
 }
 
-.box:hover > .cover {
+.box:hover .box-cover {
   top: 0;
 }
 
-.box-list {
+.box:hover .box-btn-repo {
+  opacity: 1;
+}
+
+.box:hover .box-btn-website {
+  opacity: 1;
+}
+
+.box ul {
+  background-color: #00000000;
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
 
-.repo {
+.box ul li {
+  background-color: #00000000;
+}
+
+.box-btn-repo {
   display: flex;
   align-items: center;
   color: white;
@@ -53,15 +68,21 @@
   padding: 10px 15px;
   margin: 5px;
   border-radius: 18px;
+  opacity: 0;
+  transition: all 0.3s ease-in 0.3s;
 }
 
-.repo:hover {
+.box-btn-repo-icon {
+  background-color: inherit;
+}
+
+.box-btn-repo:hover {
   text-decoration: none;
   color: white;
   background-color: #8e44ad;
 }
 
-.website {
+.box-btn-website {
   display: flex;
   align-items: center;
   color: white;
@@ -69,10 +90,40 @@
   padding: 10px 15px;
   margin: 5px;
   border-radius: 18px;
+  opacity: 0;
+  transition: all 0.3s ease-in 0.3s;
 }
 
-.website:hover {
+.box-btn-website-icon {
+  background-color: inherit;
+}
+
+.box-btn-website:hover {
   text-decoration: none;
   color: white;
   background-color: #2980b9;
+}
+
+.box-info {
+  background-color: #34495e;
+  width: 90%;
+  height: 200px;
+  padding: 40px 0px 15px 0px;
+  margin: -20px auto 20px auto;
+  border-radius: 16px;
+  z-index: 1;
+  box-shadow: #50505070 5px 5px;
+  text-align: center;
+}
+
+.box-info span,
+h5,
+h6 {
+  background-color: #34495e;
+}
+
+.box-info span {
+  color: #bdbdbd;
+  display: block;
+  font-size: 14px;
 }

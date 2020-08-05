@@ -2,9 +2,6 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Loading from "./components/Loading";
 
-// import Home from "./pages/Home";
-// import Portfolio from "./pages/Portfolio";
-
 const Home = lazy(() => import("./pages/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 
@@ -39,7 +36,7 @@ function App() {
             </li>
             <li>
               <Link className="nav-link" to="/">
-                Home
+                Contact
               </Link>
             </li>
           </ul>
