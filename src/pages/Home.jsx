@@ -29,7 +29,7 @@ function Home() {
     <div>
       <div className="home">
         <div className="content">
-          <h1 className="animate__animated animate__flash animate__delay-3s">
+          <h1 className="animate__animated animate__flash animate__delay-5s">
             Hello, My name is SumetPH.
           </h1>
           <div className="description">
