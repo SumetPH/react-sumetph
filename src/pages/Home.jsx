@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
-import { FaGithubAlt, FaFacebookF, FaEnvelope } from "react-icons/fa";
+import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
 
 function Home() {
   const word =
@@ -26,10 +26,12 @@ function Home() {
   };
 
   return (
-    <>
-      <div className="section bg">
+    <div>
+      <div className="home">
         <div className="content">
-          <h1>Hello, My name is SumetPH.</h1>
+          <h1 className="animate__animated animate__flash animate__delay-3s">
+            Hello, My name is SumetPH.
+          </h1>
           <div className="description">
             <p>{typewriter.text}</p>
           </div>
@@ -38,53 +40,51 @@ function Home() {
 
       {loading ? <div className="home-loading"></div> : null}
 
-      <div className="float-left">
-        <ul className="float-left-list">
-          <li>
-            <a
-              className="float-facebook"
-              href="https://facebook.com/notsumet1"
-              target="_blank"
-              rel="noopener noreferrer"
+      <ul className="float-left">
+        <li>
+          <a
+            className="float-line"
+            href="https://line.me/ti/p/notsumet1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconContext.Provider
+              value={{ className: "float-line-icon", size: 30 }}
             >
-              <IconContext.Provider
-                value={{ className: "float-facebook-icon", size: 30 }}
-              >
-                <FaFacebookF />
-              </IconContext.Provider>
-            </a>
-          </li>
-          <li>
-            <a
-              className="float-github"
-              href="https://github.com/sumetph"
-              target="_blank"
-              rel="noopener noreferrer"
+              <FaLine />
+            </IconContext.Provider>
+          </a>
+        </li>
+        <li>
+          <a
+            className="float-github"
+            href="https://github.com/sumetph"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconContext.Provider
+              value={{ className: "float-github-icon", size: 30 }}
             >
-              <IconContext.Provider
-                value={{ className: "float-github-icon", size: 30 }}
-              >
-                <FaGithubAlt />
-              </IconContext.Provider>
-            </a>
-          </li>
-          <li>
-            <a
-              className="float-gmail"
-              href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=notsumet1@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              <FaGithubAlt />
+            </IconContext.Provider>
+          </a>
+        </li>
+        <li>
+          <a
+            className="float-gmail"
+            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=notsumet1@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconContext.Provider
+              value={{ className: "float-gmail-icon", size: 30 }}
             >
-              <IconContext.Provider
-                value={{ className: "float-gmail-icon", size: 30 }}
-              >
-                <FaEnvelope />
-              </IconContext.Provider>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </>
+              <FaEnvelope />
+            </IconContext.Provider>
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 }
 

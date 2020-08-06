@@ -1,10 +1,14 @@
 @media (max-width: 1200px) {
-  .float-left {
-    bottom: auto;
-  }
-
   .portfolio {
     padding: 100px 10%;
     height: auto;
+  }
+
+  .contact-content {
+    padding: 150px 5% 0 5%;
+  }
+
+  .contact-content-box {
+    padding: 90px 30px;
   }
 }

@@ -116,14 +116,14 @@
   text-align: center;
 }
 
-.box-info span,
-h5,
-h6 {
+.box-info span {
+  background-color: #34495e;
+}
+.box-info h5 {
   background-color: #34495e;
 }
 
 .box-info span {
-  color: #bdbdbd;
   display: block;
   font-size: 14px;
 }

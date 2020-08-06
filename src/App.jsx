@@ -4,20 +4,9 @@ import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./pages/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
-  // const [initial, setInitial] = useState(false);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setInitial(true);
-  //   }, 2000);
-  // });
-
-  // if (initial === false) {
-  //   return <Loading />;
-  // }
-
   return (
     <Router>
       <Suspense fallback={<Loading />}>
@@ -35,7 +24,7 @@ function App() {
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/contact">
                 Contact
               </Link>
             </li>
@@ -48,6 +37,9 @@ function App() {
           </Route>
           <Route path="/portfolio">
             <Portfolio />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
         </Switch>
       </Suspense>
