@@ -9,7 +9,7 @@ function portfolio() {
         These are my website. I created by HTML CSS JS React.js Vue.js Node.js
         PHP Laravel Bootstrap Bulma MySQL PostgreSQL MongoDB
       </b>
-      <span className="d-block mb-2">Hover the image for information.</span>
+      <small className="d-block mb-2">Hover the image for information.</small>
       <div className="row">
         <Box
           img={require("../assets/website/resume.png")}
