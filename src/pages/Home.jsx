@@ -103,7 +103,7 @@ const Content = styled.div`
 `;
 
 const Description = styled.div`
-  width: 400px;
+  width: 350px;
 `;
 
 const LoadBarAnimation = keyframes`

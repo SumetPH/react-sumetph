@@ -7,7 +7,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Contact = lazy(() => import("./pages/Contact"));
 
-function App(props) {
+function App() {
   return (
     <Router onch>
       <Suspense fallback={<Loading />}>

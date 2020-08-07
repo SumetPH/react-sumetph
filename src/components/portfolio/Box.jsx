@@ -15,27 +15,29 @@ export default function Box({
 }) {
   return (
     <div className="col-lg-12 col-xl-6 mb-4">
-      <Container img={img}>
-        <Filter>
-          <UL>
-            <li>
-              <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
-                <FaGithubAlt />
-                Github
-              </BtnRepo>
-            </li>
-            <li>
-              <BtnWebsite
-                href={website}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaChrome />
-                Website
-              </BtnWebsite>
-            </li>
-          </UL>
-        </Filter>
+      <Container>
+        <Cover img={img}>
+          <Filter>
+            <UL>
+              <li>
+                <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
+                  <FaGithubAlt />
+                  Github
+                </BtnRepo>
+              </li>
+              <li>
+                <BtnWebsite
+                  href={website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaChrome />
+                  Website
+                </BtnWebsite>
+              </li>
+            </UL>
+          </Filter>
+        </Cover>
       </Container>
       <Info>
         {title ? <h5>{title}</h5> : null}
@@ -55,19 +57,19 @@ const Filter = styled.div`
   height: 100%;
   width: 100%;
   background-color: #34495eda;
-  transition: all 0.3s ease-out;
   text-align: center;
   padding-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in;
 `;
 
 const UL = styled.ul`
-  background-color: #00000000;
   display: flex;
   justify-content: center;
   list-style-type: none;
+  padding: 0;
 `;
 
 const BtnRepo = styled.a`
@@ -78,8 +80,8 @@ const BtnRepo = styled.a`
   padding: 10px 15px;
   margin: 5px;
   border-radius: 18px;
-  opacity: 0;
-  transition: all 0.3s ease-in 0.3s;
+  transform: scale(0);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 1.8) 0.2s;
   &:hover {
     text-decoration: none;
     color: white;
@@ -87,16 +89,7 @@ const BtnRepo = styled.a`
   }
 `;
 
-const BtnWebsite = styled.a`
-  display: flex;
-  align-items: center;
-  color: white;
-  background-color: #2c3e50;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 18px;
-  opacity: 0;
-  transition: all 0.3s ease-in 0.3s;
+const BtnWebsite = styled(BtnRepo)`
   &:hover {
     text-decoration: none;
     color: white;
@@ -104,24 +97,34 @@ const BtnWebsite = styled.a`
   }
 `;
 
-const Container = styled.div`
+const Cover = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url(${(props) => props.img});
+  background-size: cover;
+  transition: all 0.2s cubic-bezier(1, 0, 0.4, 1);
+  &::before {
+    background-color: gray;
+  }
+`;
+
+const Container = styled.div`
+  padding-top: 56.25%;
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding-top: 50%;
-  background-size: cover;
   border-radius: 18px;
-  text-align: center;
-  z-index: 2;
+  &:hover ${Cover} {
+    transform: scale(1.2);
+  }
   &:hover ${Filter} {
     top: 0;
   }
   &:hover ${BtnRepo} {
-    opacity: 1;
-  }
-  &:hover ${BtnWebsite} {
-    opacity: 1;
+    transform: scale(1);
   }
 `;
 
