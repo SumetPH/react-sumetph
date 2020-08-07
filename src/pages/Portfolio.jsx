@@ -1,9 +1,10 @@
 import React from "react";
-import Box from "../components/Box";
+import Box from "../components/portfolio/Box";
+import styled from "styled-components/macro";
 
-function portfolio() {
+export default function portfolio() {
   return (
-    <div className="portfolio">
+    <Container>
       <h1>Web Developer Portfolio</h1>
       <b className="d-block mb-4">
         These are my website. I created by HTML CSS JS React.js Vue.js Node.js
@@ -56,8 +57,14 @@ function portfolio() {
           website="https://go-restaurant-sumetph.herokuapp.com/"
         />
       </div>
-    </div>
+    </Container>
   );
 }
 
-export default portfolio;
+const Container = styled.div`
+  padding: 100px 20%;
+  @media (max-width: 1200px) {
+    padding: 100px 10%;
+    height: auto;
+  }
+`;

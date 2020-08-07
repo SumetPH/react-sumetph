@@ -1,15 +1,14 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
+import styled from "styled-components/macro";
 
-import "../css/contact.css";
-
-function Contact() {
+export default function Contact() {
   return (
-    <div className="contact">
-      <div className="contact-filter"></div>
-      <div className="contact-content">
-        <div className="contact-content-box">
+    <Container img={require("../assets/bg/contact.jpg")}>
+      <Filter />
+      <Content>
+        <ContentBox>
           <h1>Contact</h1>
           <b className="d-block mb-4">
             If you wanna talk to me about job or project. You can contact me
@@ -51,10 +50,49 @@ function Contact() {
             </IconContext.Provider>
             <span className="ml-2">: notsumet1@gmail.com</span>
           </h5>
-        </div>
-      </div>
-    </div>
+        </ContentBox>
+      </Content>
+    </Container>
   );
 }
 
-export default Contact;
+const Container = styled.div`
+  background-image: url(${(props) => props.img});
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+const Filter = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+`;
+
+const Content = styled.div`
+  padding: 150px 20% 0 20%;
+  display: flex;
+  @media (max-width: 1200px) {
+    padding: 150px 5% 0 5%;
+  }
+`;
+
+const ContentBox = styled.div`
+  width: 100%;
+  padding: 40px 80px;
+  border-radius: 18px;
+  box-sizing: border-box;
+  background-color: #2d3436;
+  z-index: 1;
+  @media (max-width: 1200px) {
+    padding: 90px 30px;
+  }
+`;

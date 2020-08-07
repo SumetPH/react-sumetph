@@ -1,36 +1,17 @@
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Loading from "./components/Loading";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Loading from "./components/app/Loading";
 
+const Nav = lazy(() => import("./components/app/Nav"));
 const Home = lazy(() => import("./pages/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Contact = lazy(() => import("./pages/Contact"));
 
-function App() {
+function App(props) {
   return (
-    <Router>
+    <Router onch>
       <Suspense fallback={<Loading />}>
-        <div className="nav">
-          <ul className="nav-list">
-            <li>
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
-              <div className="nav-load"></div>
-            </li>
-            <li>
-              <Link className="nav-link" to="/portfolio">
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-
+        <Nav />
         <Switch>
           <Route exact path="/">
             <Home />
