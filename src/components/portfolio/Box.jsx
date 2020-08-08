@@ -53,6 +53,7 @@ export default function Box({
 
 const Filter = styled.div`
   top: 100%;
+  border-radius: 18px;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -62,7 +63,6 @@ const Filter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 18px;
   transition: all 0.2s ease-in;
 `;
 
@@ -100,6 +100,7 @@ const BtnWebsite = styled(BtnRepo)`
 
 const Cover = styled.div`
   position: absolute;
+  border-radius: 18px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -107,17 +108,14 @@ const Cover = styled.div`
   background-image: url(${props => props.img});
   background-size: cover;
   transition: all 0.2s cubic-bezier(1, 0, 0.4, 1);
-  &::before {
-    background-color: gray;
-  }
 `;
 
 const Container = styled.div`
   padding-top: 56.25%;
+  border-radius: 18px;
   overflow: hidden;
   position: relative;
   width: 100%;
-  border-radius: 18px;
   &:hover ${Cover} {
     transform: scale(1.2);
   }

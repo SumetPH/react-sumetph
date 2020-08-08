@@ -19,7 +19,7 @@ export default function Home() {
       setTimeout(() => {
         setTypewriter({
           index: typewriter.index + 1,
-          text: typewriter.text + word.charAt(typewriter.index),
+          text: typewriter.text + word.charAt(typewriter.index)
         });
       }, 30);
     } else {
@@ -33,7 +33,7 @@ export default function Home() {
 
       <Container>
         <Content>
-          <h1 className="animate__animated animate__flash animate__delay-5s">
+          <h1 className="animate__animated animate__fadeInRight">
             Hello, My name is SumetPH.
           </h1>
           <Description>
@@ -83,7 +83,7 @@ export default function Home() {
 
 const IconContextValue = {
   size: 30,
-  style: { color: "#fefefe" },
+  style: { color: "#fefefe" }
 };
 
 const Container = styled.div`

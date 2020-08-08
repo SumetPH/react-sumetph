@@ -6,7 +6,7 @@ export default function Nav() {
   const location = useLocation();
 
   return (
-    <UL>
+    <UL className="animate__animated animate__fadeIn">
       <li>
         <LinkStyled location={location} to="/">
           Home
@@ -37,7 +37,7 @@ const UL = styled.ul`
 `;
 
 const LinkStyled = styled(Link)`
-  background-color: ${(props) =>
+  background-color: ${props =>
     props.location.pathname === "/contact" ? "" : "#34495e"};
   color: white;
   padding: 5px 10px;
