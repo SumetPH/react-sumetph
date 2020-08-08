@@ -11,7 +11,7 @@ export default function Box({
   css,
   host,
   repo,
-  website,
+  website
 }) {
   return (
     <div className="col-lg-12 col-xl-6 mb-4">
@@ -62,6 +62,7 @@ const Filter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 18px;
   transition: all 0.2s ease-in;
 `;
 
@@ -103,7 +104,7 @@ const Cover = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(${(props) => props.img});
+  background-image: url(${props => props.img});
   background-size: cover;
   transition: all 0.2s cubic-bezier(1, 0, 0.4, 1);
   &::before {
