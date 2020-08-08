@@ -11,33 +11,30 @@ export default function Box({
   css,
   host,
   repo,
-  website
+  website,
 }) {
   return (
     <div className="col-lg-12 col-xl-6 mb-4">
       <Container>
-        <Cover img={img}>
-          <Filter>
-            <UL>
-              <li>
-                <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
-                  <FaGithubAlt />
-                  Github
-                </BtnRepo>
-              </li>
-              <li>
-                <BtnWebsite
-                  href={website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaChrome />
-                  Website
-                </BtnWebsite>
-              </li>
-            </UL>
-          </Filter>
-        </Cover>
+        <Cover img={img} />
+        <UL>
+          <li>
+            <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
+              <FaGithubAlt />
+              Github
+            </BtnRepo>
+          </li>
+          <li>
+            <BtnWebsite
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaChrome />
+              Website
+            </BtnWebsite>
+          </li>
+        </UL>
       </Container>
       <Info>
         {title ? <h5>{title}</h5> : null}
@@ -51,26 +48,33 @@ export default function Box({
   );
 }
 
-const Filter = styled.div`
-  top: 100%;
-  border-radius: 18px;
+const Cover = styled.div`
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #34495eda;
-  text-align: center;
-  padding-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in;
+  border-radius: 18px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.4, 1);
 `;
 
 const UL = styled.ul`
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34495eda;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
 `;
 
 const BtnRepo = styled.a`
@@ -98,18 +102,6 @@ const BtnWebsite = styled(BtnRepo)`
   }
 `;
 
-const Cover = styled.div`
-  position: absolute;
-  border-radius: 18px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(${props => props.img});
-  background-size: cover;
-  transition: all 0.2s cubic-bezier(1, 0, 0.4, 1);
-`;
-
 const Container = styled.div`
   padding-top: 56.25%;
   border-radius: 18px;
@@ -119,8 +111,8 @@ const Container = styled.div`
   &:hover ${Cover} {
     transform: scale(1.2);
   }
-  &:hover ${Filter} {
-    top: 0;
+  &:hover ${UL} {
+    opacity: 1;
   }
   &:hover ${BtnRepo} {
     transform: scale(1);
