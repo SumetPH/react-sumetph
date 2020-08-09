@@ -54,17 +54,18 @@ const Cover = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+  transition: all 0.2s ease-in;
 `;
 
 const Img = styled.div`
   position: absolute;
-  border-radius: 18px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-image: url(${(props) => props.img});
   background-size: cover;
+  transition: all 0.2s ease-in;
 `;
 
 const UL = styled.ul`
@@ -121,9 +122,11 @@ const Info = styled.div`
 `;
 
 const Container = styled.div`
-  transition: transform 0.2s cubic-bezier(1, 0, 0.4, 1);
-  &:hover {
-    transform: scale(1.02);
+  &:hover ${Cover} {
+    border-radius: 0;
+  }
+  &:hover ${Img} {
+    transform: scale(1.1);
   }
   &:hover ${UL} {
     opacity: 1;
