@@ -15,16 +15,15 @@ export default function Box({
 }) {
   return (
     <Container className="col-lg-12 col-xl-6 mb-4 animate__animated animate__fadeIn">
-      <Cover>
-        <Img img={img} />
+      <Cover img={img}>
         <UL>
-          <li>
+          <LI>
             <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
               <FaGithubAlt />
               Github
             </BtnRepo>
-          </li>
-          <li>
+          </LI>
+          <LI>
             <BtnWebsite
               href={website}
               target="_blank"
@@ -33,7 +32,7 @@ export default function Box({
               <FaChrome />
               Website
             </BtnWebsite>
-          </li>
+          </LI>
         </UL>
       </Cover>
       <Info>
@@ -49,23 +48,12 @@ export default function Box({
 }
 
 const Cover = styled.div`
-  padding-top: 56.25%;
-  border-radius: 18px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  transition: all 0.2s ease-in;
-`;
-
-const Img = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-image: url(${(props) => props.img});
   background-size: cover;
-  transition: all 0.2s ease-in;
+  padding-top: 56.25%;
+  border-radius: 18px;
+  position: relative;
+  width: 100%;
 `;
 
 const UL = styled.ul`
@@ -74,16 +62,19 @@ const UL = styled.ul`
   right: 0;
   bottom: 0;
   left: 0;
-  list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
+  list-style-type: none;
   justify-content: center;
   align-items: center;
   background-color: #34495eda;
+  border-radius: 18px;
   opacity: 0;
-  transition: opacity 0.1s ease-in;
+  transition: all 0.2s ease-in;
 `;
+
+const LI = styled.li``;
 
 const BtnRepo = styled.a`
   display: flex;
@@ -93,8 +84,8 @@ const BtnRepo = styled.a`
   padding: 10px 15px;
   margin: 5px;
   border-radius: 18px;
-  transform: scale(0);
-  transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 1.8) 0.2s;
+  transform: scale(0.7);
+  transition: all 0.3s cubic-bezier(0.5, 1.5, 1, 1.2);
   &:hover {
     text-decoration: none;
     color: white;
@@ -104,8 +95,6 @@ const BtnRepo = styled.a`
 
 const BtnWebsite = styled(BtnRepo)`
   &:hover {
-    text-decoration: none;
-    color: white;
     background-color: #2980b9;
   }
 `;
@@ -117,17 +106,10 @@ const Info = styled.div`
   padding: 40px 0px 15px 0px;
   margin: -20px auto 20px auto;
   border-radius: 16px;
-  z-index: 1;
   text-align: center;
 `;
 
 const Container = styled.div`
-  &:hover ${Cover} {
-    border-radius: 0;
-  }
-  &:hover ${Img} {
-    transform: scale(1.1);
-  }
   &:hover ${UL} {
     opacity: 1;
   }
