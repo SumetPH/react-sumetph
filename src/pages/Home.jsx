@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
 import styled, { keyframes } from "styled-components/macro";
+import { TweenMax } from "gsap";
 
 const word =
   "I'm looking for a job in Web Development. I'm interested Front-end, React.js, Vue.js and Back-end, Node.js, Laravel. If you looking for a Web Developer contact me, please.";
 
 export default function Home() {
+  const loadBar = useRef();
   const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
-  const [typing, setTyping] = useState(true);
 
   useEffect(() => {
     typewriterFunc();
@@ -19,18 +20,18 @@ export default function Home() {
       setTimeout(() => {
         setTypewriter({
           index: typewriter.index + 1,
-          text: typewriter.text + word.charAt(typewriter.index)
+          text: typewriter.text + word.charAt(typewriter.index),
         });
-      }, 30);
+      }, 15);
     } else {
-      setTyping(false);
+      TweenMax.to(loadBar.current, 0.5, { css: { opacity: 0 } });
     }
   };
 
   return (
     <div>
-      {typing ? <LoadBar /> : null}
-
+      {/* {typing ?  : null} */}
+      <LoadBar ref={loadBar} />
       <Container>
         <Content>
           <h1 className="animate__animated animate__fadeInRight">
@@ -83,7 +84,7 @@ export default function Home() {
 
 const IconContextValue = {
   size: 30,
-  style: { color: "#fefefe" }
+  style: { color: "#fefefe" },
 };
 
 const Container = styled.div`

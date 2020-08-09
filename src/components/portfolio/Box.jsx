@@ -14,9 +14,9 @@ export default function Box({
   website,
 }) {
   return (
-    <div className="col-lg-12 col-xl-6 mb-4">
-      <Container>
-        <Cover img={img} />
+    <Container className="col-lg-12 col-xl-6 mb-4 animate__animated animate__fadeIn">
+      <Cover>
+        <Img img={img} />
         <UL>
           <li>
             <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
@@ -35,7 +35,7 @@ export default function Box({
             </BtnWebsite>
           </li>
         </UL>
-      </Container>
+      </Cover>
       <Info>
         {title ? <h5>{title}</h5> : null}
         {frontEnd ? <Span>Front-End : {frontEnd}</Span> : null}
@@ -44,11 +44,19 @@ export default function Box({
         {css ? <Span>CSS : {css}</Span> : null}
         {host ? <Span>Host : {host}</Span> : null}
       </Info>
-    </div>
+    </Container>
   );
 }
 
 const Cover = styled.div`
+  padding-top: 56.25%;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+`;
+
+const Img = styled.div`
   position: absolute;
   border-radius: 18px;
   top: 0;
@@ -57,7 +65,6 @@ const Cover = styled.div`
   left: 0;
   background-image: url(${(props) => props.img});
   background-size: cover;
-  transition: transform 0.2s cubic-bezier(1, 0, 0.4, 1);
 `;
 
 const UL = styled.ul`
@@ -102,23 +109,6 @@ const BtnWebsite = styled(BtnRepo)`
   }
 `;
 
-const Container = styled.div`
-  padding-top: 56.25%;
-  border-radius: 18px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  &:hover ${Cover} {
-    transform: scale(1.2);
-  }
-  &:hover ${UL} {
-    opacity: 1;
-  }
-  &:hover ${BtnRepo} {
-    transform: scale(1);
-  }
-`;
-
 const Info = styled.div`
   background-color: #34495e;
   width: 90%;
@@ -127,8 +117,20 @@ const Info = styled.div`
   margin: -20px auto 20px auto;
   border-radius: 16px;
   z-index: 1;
-  box-shadow: #50505070 5px 5px;
   text-align: center;
+`;
+
+const Container = styled.div`
+  transition: transform 0.2s cubic-bezier(1, 0, 0.4, 1);
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:hover ${UL} {
+    opacity: 1;
+  }
+  &:hover ${BtnRepo} {
+    transform: scale(1);
+  }
 `;
 
 const Span = styled.span`
