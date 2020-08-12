@@ -18,7 +18,7 @@ export default function portfolio() {
           frontEnd="React.js"
           backBnd="-"
           dataBase="-"
-          css="Bulma"
+          cssFramework="Bulma"
           host="Github"
           repo="https://github.com/SumetPH/react-resume"
           website="https://sumetph.github.io/"
@@ -29,7 +29,7 @@ export default function portfolio() {
           frontEnd="Vue.js"
           backBnd="Laravel 5.5"
           dataBase="MySQL"
-          css="Bootstrap 4"
+          cssFramework="Bootstrap 4"
           host="000webhostapp"
           repo="https://github.com/SumetPH/laravel-graduation-project"
           website="https://rmuti-dds.000webhostapp.com/"
@@ -40,7 +40,7 @@ export default function portfolio() {
           frontEnd="Next.js"
           backBnd="Node.js"
           dataBase="MongoDB"
-          css="Bulma"
+          cssFramework="Bulma"
           host="Heroku"
           repo="https://github.com/SumetPH/next-isr"
           website="https://next-isr.herokuapp.com/"
@@ -51,10 +51,52 @@ export default function portfolio() {
           frontEnd="Vue.js"
           backBnd="Golang"
           dataBase="PostgreSQL"
-          css="Bootstrap 4"
+          cssFramework="Bootstrap 4"
           host="Heroku"
           repo="https://github.com/SumetPH/next-isr"
           website="https://go-restaurant-sumetph.herokuapp.com/"
+        />
+        <Box
+          img={require("../assets/website/twitter.png")}
+          title="Twitter Stream"
+          frontEnd="HTML CSS JS"
+          backBnd="Node.js"
+          dataBase="-"
+          cssFramework="Bootstrap 4"
+          host="Heroku"
+          repo="https://github.com/SumetPH/node-twitter-stream"
+          website="https://node-twitter-stream-sumetph.herokuapp.com/"
+        />
+        <Box
+          img={require("../assets/website/flashcard.png")}
+          title="Flashcard"
+          frontEnd="React.js"
+          backBnd="Node.js"
+          dataBase="Cloud Firestore"
+          cssFramework="Bulma"
+          host="Heroku"
+          repo="https://github.com/SumetPH/fern-flashcard"
+          website="https://fern-flashcard-sumetph.herokuapp.com/"
+        />
+        <Box
+          img={require("../assets/website/tab.gif")}
+          title="NewTab Live Wallpaper"
+          frontEnd="HTML CSS JS"
+          backBnd="-"
+          dataBase="-"
+          cssFramework="-"
+          host="Github"
+          repo="https://github.com/SumetPH/chrome-extension-newtab-live-wallpaper"
+        />
+        <Box
+          img={require("../assets/website/youtube.gif")}
+          title="Youtube Comment Switcher"
+          frontEnd="jQuery"
+          backBnd="-"
+          dataBase="-"
+          cssFramework="-"
+          host="Github"
+          repo="https://github.com/SumetPH/chrome-extension-youtube-comment-switcher"
         />
       </div>
     </Container>

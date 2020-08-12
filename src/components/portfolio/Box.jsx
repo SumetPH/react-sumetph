@@ -8,31 +8,35 @@ export default function Box({
   frontEnd,
   backBnd,
   dataBase,
-  css,
+  cssFramework,
   host,
   repo,
-  website,
+  website
 }) {
   return (
-    <Container className="col-lg-12 col-xl-6 mb-4 animate__animated animate__fadeIn">
+    <Container className="col-md-6 mb-4 animate__animated animate__fadeIn">
       <Cover img={img}>
         <UL>
-          <LI>
-            <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
-              <FaGithubAlt />
-              Github
-            </BtnRepo>
-          </LI>
-          <LI>
-            <BtnWebsite
-              href={website}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaChrome />
-              Website
-            </BtnWebsite>
-          </LI>
+          {repo ? (
+            <LI>
+              <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
+                <FaGithubAlt />
+                Github
+              </BtnRepo>
+            </LI>
+          ) : null}
+          {website ? (
+            <LI>
+              <BtnWebsite
+                href={website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaChrome />
+                Website
+              </BtnWebsite>
+            </LI>
+          ) : null}
         </UL>
       </Cover>
       <Info>
@@ -40,7 +44,7 @@ export default function Box({
         {frontEnd ? <Span>Front-End : {frontEnd}</Span> : null}
         {backBnd ? <Span>Back-End : {backBnd}</Span> : null}
         {dataBase ? <Span>Database : {dataBase}</Span> : null}
-        {css ? <Span>CSS : {css}</Span> : null}
+        {cssFramework ? <Span>CSS : {cssFramework}</Span> : null}
         {host ? <Span>Host : {host}</Span> : null}
       </Info>
     </Container>
@@ -48,7 +52,7 @@ export default function Box({
 }
 
 const Cover = styled.div`
-  background-image: url(${(props) => props.img});
+  background-image: url(${props => props.img});
   background-size: cover;
   padding-top: 56.25%;
   border-radius: 18px;
