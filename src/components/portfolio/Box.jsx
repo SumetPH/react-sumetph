@@ -55,6 +55,7 @@ const Cover = styled.div`
   background-image: url(${props => props.img});
   background-size: cover;
   padding-top: 56.25%;
+  border: 5px solid #34495e;
   border-radius: 18px;
   position: relative;
   width: 100%;
@@ -73,7 +74,6 @@ const UL = styled.ul`
   justify-content: center;
   align-items: center;
   background-color: #34495eda;
-  border-radius: 18px;
   opacity: 0;
   transition: all 0.2s ease-in;
 `;

@@ -20,7 +20,7 @@ export default function Home() {
       setTimeout(() => {
         setTypewriter({
           index: typewriter.index + 1,
-          text: typewriter.text + word.charAt(typewriter.index),
+          text: typewriter.text + word.charAt(typewriter.index)
         });
       }, 15);
     } else {
@@ -30,7 +30,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* {typing ?  : null} */}
       <LoadBar ref={loadBar} />
       <Container>
         <Content>
@@ -84,7 +83,7 @@ export default function Home() {
 
 const IconContextValue = {
   size: 30,
-  style: { color: "#fefefe" },
+  style: { color: "#fefefe" }
 };
 
 const Container = styled.div`
