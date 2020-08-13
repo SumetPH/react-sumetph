@@ -13,7 +13,7 @@ export default function portfolio() {
       <small className="d-block mb-2">Hover the image for information.</small>
       <div className="row">
         <Box
-          img={require("../assets/website/resume.png")}
+          img={require("../assets/website/resume.jpg")}
           title="SumetPH's Resume"
           frontEnd="React.js"
           backBnd="-"
@@ -24,7 +24,7 @@ export default function portfolio() {
           website="https://sumetph.github.io/"
         />
         <Box
-          img={require("../assets/website/project.png")}
+          img={require("../assets/website/project.jpg")}
           title="DDS Rmuti"
           frontEnd="Vue.js"
           backBnd="Laravel 5.5"
@@ -35,7 +35,7 @@ export default function portfolio() {
           website="https://rmuti-dds.000webhostapp.com/"
         />
         <Box
-          img={require("../assets/website/isr.png")}
+          img={require("../assets/website/isr.jpg")}
           title="ISR Rmuti"
           frontEnd="Next.js"
           backBnd="Node.js"
@@ -46,7 +46,7 @@ export default function portfolio() {
           website="https://next-isr.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/restaurant.png")}
+          img={require("../assets/website/restaurant.jpg")}
           title="CRUD Restaurant"
           frontEnd="Vue.js"
           backBnd="Golang"
@@ -57,7 +57,7 @@ export default function portfolio() {
           website="https://go-restaurant-sumetph.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/twitter.png")}
+          img={require("../assets/website/twitter.jpg")}
           title="Twitter Stream"
           frontEnd="HTML CSS JS"
           backBnd="Node.js"
@@ -68,7 +68,7 @@ export default function portfolio() {
           website="https://node-twitter-stream-sumetph.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/flashcard.png")}
+          img={require("../assets/website/flashcard.jpg")}
           title="Flashcard"
           frontEnd="React.js"
           backBnd="Node.js"
