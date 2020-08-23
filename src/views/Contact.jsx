@@ -5,7 +5,10 @@ import styled from "styled-components/macro";
 
 export default function Contact() {
   return (
-    <Container img={require("../assets/bg/contact.jpg")}>
+    <Container
+      className="animate__animated animate__fadeIn"
+      img={require("../assets/bg/contact.jpg")}
+    >
       <Filter />
       <Content>
         <ContentBox>

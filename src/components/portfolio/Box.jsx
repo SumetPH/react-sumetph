@@ -11,10 +11,10 @@ export default function Box({
   cssFramework,
   host,
   repo,
-  website
+  website,
 }) {
   return (
-    <Container className="col-md-6 mb-4 animate__animated animate__fadeIn">
+    <Container className="col-md-6 mb-4">
       <Cover img={img}>
         <UL>
           {repo ? (
@@ -52,7 +52,7 @@ export default function Box({
 }
 
 const Cover = styled.div`
-  background-image: url(${props => props.img});
+  background-image: url(${(props) => props.img});
   background-size: cover;
   padding-top: 56.25%;
   border: 5px solid #34495e;
