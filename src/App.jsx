@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loading from "./components/app/Loading";
 
 const Nav = lazy(() => import("./components/app/Nav"));
-const Home = lazy(() => import("./pages/Home"));
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const Contact = lazy(() => import("./pages/Contact"));
+const Home = lazy(() => import("./views/Home"));
+const Portfolio = lazy(() => import("./views/Portfolio"));
+const Contact = lazy(() => import("./views/Contact"));
 
 function App() {
   return (

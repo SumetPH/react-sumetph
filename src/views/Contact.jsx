@@ -9,12 +9,12 @@ export default function Contact() {
       <Filter />
       <Content>
         <ContentBox>
+          <h1>Contact</h1>
+          <b className="d-block mb-4">
+            If you wanna talk to me about job or project. You can contact me
+            from below.
+          </b>
           <div className="animate__animated animate__fadeIn">
-            <h1>Contact</h1>
-            <b className="d-block mb-4">
-              If you wanna talk to me about job or project. You can contact me
-              from below.
-            </b>
             <h5>
               <IconContext.Provider
                 value={{

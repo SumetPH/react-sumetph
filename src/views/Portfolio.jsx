@@ -1,17 +1,17 @@
 import React from "react";
 import Box from "../components/portfolio/Box";
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
 
 export default function portfolio() {
   return (
     <Container>
       <h1>Web Developer Portfolio</h1>
       <b className="d-block mb-4">
-        These are my website. I created by HTML CSS JS React.js Vue.js Node.js
+        These are my projects. I created by HTML CSS JS React.js Vue.js Node.js
         PHP Laravel Bootstrap Bulma MySQL PostgreSQL MongoDB
       </b>
       <small className="d-block mb-2">Hover the image for information.</small>
-      <div className="row">
+      <Row className="row">
         <Box
           img={require("../assets/website/resume.jpg")}
           title="SumetPH's Resume"
@@ -98,7 +98,7 @@ export default function portfolio() {
           host="Github"
           repo="https://github.com/SumetPH/chrome-extension-youtube-comment-switcher"
         />
-      </div>
+      </Row>
     </Container>
   );
 }
@@ -109,4 +109,15 @@ const Container = styled.div`
     padding: 100px 10%;
     height: auto;
   }
+`;
+
+const RowAnimation = keyframes`
+  100% {
+    margin-top: 0;
+  }
+`;
+
+const Row = styled.div`
+  animation: ${RowAnimation} 0.5s forwards;
+  margin-top: 100px;
 `;

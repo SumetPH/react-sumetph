@@ -2,31 +2,46 @@ import React, { useState, useEffect, useRef } from "react";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
 import styled, { keyframes } from "styled-components/macro";
-import { TweenMax } from "gsap";
+import { TweenMax, TimelineMax } from "gsap";
 
 const word =
   "I'm looking for a job in Web Development. I'm interested Front-end, React.js, Vue.js and Back-end, Node.js, Laravel. If you looking for a Web Developer contact me, please.";
 
 export default function Home() {
   const loadBar = useRef();
+  const floatLine = useRef();
+  const floatGithub = useRef();
+  const floatGmail = useRef();
   const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
 
   useEffect(() => {
-    typewriterFunc();
-  });
-
-  const typewriterFunc = () => {
     if (typewriter.index < word.length) {
       setTimeout(() => {
         setTypewriter({
           index: typewriter.index + 1,
-          text: typewriter.text + word.charAt(typewriter.index)
+          text: typewriter.text + word.charAt(typewriter.index),
         });
       }, 15);
     } else {
       TweenMax.to(loadBar.current, 0.5, { css: { opacity: 0 } });
     }
-  };
+  });
+
+  useEffect(() => {
+    const tl = new TimelineMax({ paused: true });
+    tl.to(floatLine.current, {
+      duration: 0.5,
+      css: { marginLeft: 0 },
+    });
+    tl.to(floatGithub.current, {
+      duration: 0.5,
+      css: { marginLeft: 0 },
+    });
+    tl.to(floatGmail.current, {
+      duration: 0.5,
+      css: { marginLeft: 0 },
+    }).play();
+  }, []);
 
   return (
     <div>
@@ -45,6 +60,7 @@ export default function Home() {
       <Float>
         <li>
           <FloatLine
+            ref={floatLine}
             href="https://line.me/ti/p/notsumet1"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,6 +72,7 @@ export default function Home() {
         </li>
         <li>
           <FloatGithub
+            ref={floatGithub}
             href="https://github.com/sumetph"
             target="_blank"
             rel="noopener noreferrer"
@@ -67,6 +84,7 @@ export default function Home() {
         </li>
         <li>
           <FloatGmail
+            ref={floatGmail}
             href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=notsumet1@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -83,7 +101,7 @@ export default function Home() {
 
 const IconContextValue = {
   size: 30,
-  style: { color: "#fefefe" }
+  style: { color: "#fefefe" },
 };
 
 const Container = styled.div`
@@ -134,19 +152,20 @@ const FloatAnimation = keyframes`
 
 const Float = styled.ul`
   position: fixed;
-  left: -100px;
+  left: 0;
   bottom: 3%;
   padding: 0;
   margin: 0;
   list-style-type: none;
   z-index: 1;
-  animation: ${FloatAnimation} 1s ease-in 1s forwards;
+  /* animation: ${FloatAnimation} 1s ease-in 1s forwards; */
 `;
 
 const FloatLine = styled.a`
   background-color: #00ae2c;
   display: inline-block;
   padding: 10px;
+  margin-left: -50px;
   transition: all 0.2s ease-in-out;
   &:hover {
     padding-left: 30px;
