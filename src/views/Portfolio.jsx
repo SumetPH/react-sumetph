@@ -53,7 +53,7 @@ export default function portfolio() {
           dataBase="PostgreSQL"
           cssFramework="Bootstrap 4"
           host="Heroku"
-          repo="https://github.com/SumetPH/next-isr"
+          repo="https://github.com/SumetPH/go-restaurant"
           website="https://go-restaurant-sumetph.herokuapp.com/"
         />
         <Box
