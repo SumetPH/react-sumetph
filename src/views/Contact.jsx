@@ -40,7 +40,17 @@ export default function Contact() {
               >
                 <FaGithubAlt />
               </IconContext.Provider>
-              <span className="ml-2">: github.com/sumetph</span>
+              <span className="ml-2">
+                {": "}
+                <a
+                  href="https://github.com/sumeth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  github.com/sumetph
+                </a>
+              </span>
             </h5>
             <h5>
               <IconContext.Provider
