@@ -43,7 +43,7 @@ export default function Contact() {
               <span className="ml-2">
                 {": "}
                 <a
-                  href="https://github.com/sumeth"
+                  href="https://github.com/sumetph"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
