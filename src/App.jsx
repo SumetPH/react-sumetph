@@ -9,7 +9,7 @@ const Contact = lazy(() => import("./views/Contact"));
 
 function App() {
   return (
-    <Router onch>
+    <Router>
       <Suspense fallback={<Loading />}>
         <Nav />
         <Switch>
