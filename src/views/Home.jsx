@@ -59,7 +59,7 @@ export default function Home() {
           </Description>
           <BtnProject
             to="/portfolio"
-            className="animate__animated animate__fadeIn"
+            className="animate__animated animate__fadeIn animate__delay-1s"
             show={btnProjectDisplay ? "block" : "none"}
           >
             See all project

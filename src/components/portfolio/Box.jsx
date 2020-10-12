@@ -20,7 +20,7 @@ export default function Box({
           {repo ? (
             <LI>
               <BtnRepo href={repo} target="_blank" rel="noopener noreferrer">
-                <FaGithubAlt />
+                <FaGithubAlt style={{ marginRight: 5 }} />
                 Github
               </BtnRepo>
             </LI>
@@ -32,8 +32,8 @@ export default function Box({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaChrome />
-                Website
+                <FaChrome style={{ marginRight: 5 }} />
+                Demo
               </BtnWebsite>
             </LI>
           ) : null}
