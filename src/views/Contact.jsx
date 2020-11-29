@@ -23,7 +23,7 @@ export default function Contact() {
                 value={{
                   className:
                     "animate__animated animate__fadeInLeft animate__delay-1s",
-                  size: 35,
+                  size: 35
                 }}
               >
                 <FaLine />
@@ -35,7 +35,7 @@ export default function Contact() {
                 value={{
                   className:
                     "animate__animated animate__jackInTheBox animate__delay-2s",
-                  size: 35,
+                  size: 35
                 }}
               >
                 <FaGithubAlt />
@@ -57,7 +57,7 @@ export default function Contact() {
                 value={{
                   className:
                     "animate__animated animate__fadeInUp animate__delay-3s",
-                  size: 35,
+                  size: 35
                 }}
               >
                 <FaEnvelope />
@@ -72,7 +72,7 @@ export default function Contact() {
 }
 
 const Container = styled.div`
-  background-image: url(${(props) => props.img});
+  background-image: url(${props => props.img});
   position: absolute;
   top: 0;
   bottom: 0;

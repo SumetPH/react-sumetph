@@ -29,7 +29,7 @@ export default function portfolio() {
           frontEnd="Vue.js"
           backBnd="Laravel 5.5"
           dataBase="MySQL"
-          cssFramework="Bootstrap 4"
+          cssFramework="Bootstrap"
           host="000webhostapp"
           repo="https://github.com/SumetPH/laravel-graduation-project"
           website="https://rmuti-dds.000webhostapp.com/"
@@ -51,7 +51,7 @@ export default function portfolio() {
           frontEnd="Vue.js"
           backBnd="Golang"
           dataBase="PostgreSQL"
-          cssFramework="Bootstrap 4"
+          cssFramework="Bootstrap"
           host="Heroku"
           repo="https://github.com/SumetPH/go-restaurant"
           website="https://go-restaurant-sumetph.herokuapp.com/"
@@ -62,7 +62,7 @@ export default function portfolio() {
           frontEnd="HTML CSS JS"
           backBnd="Node.js"
           dataBase="-"
-          cssFramework="Bootstrap 4"
+          cssFramework="Bootstrap"
           host="Heroku"
           repo="https://github.com/SumetPH/node-twitter-stream"
           website="https://node-twitter-stream-sumetph.herokuapp.com/"
@@ -77,6 +77,28 @@ export default function portfolio() {
           host="Heroku"
           repo="https://github.com/SumetPH/fern-flashcard"
           website="https://fern-flashcard-sumetph.herokuapp.com/"
+        />
+        <Box
+          img={require("../assets/website/movie.png")}
+          title="Movie"
+          frontEnd="Vue.js"
+          backBnd="-"
+          dataBase="-"
+          cssFramework="Bootstrap"
+          host="Vercel"
+          repo="https://github.com/SumetPH/movie"
+          website="https://movie-sumetph.vercel.app/"
+        />
+        <Box
+          img={require("../assets/website/todolist.png")}
+          title="TodoList"
+          frontEnd="React.js"
+          backBnd="-"
+          dataBase="-"
+          cssFramework="Materializecss"
+          host="Vercel"
+          repo="https://github.com/SumetPH/todolist"
+          website="https://todolist-sumetph.vercel.app/"
         />
         <Box
           img={require("../assets/website/tab.gif")}
