@@ -79,28 +79,6 @@ export default function portfolio() {
           website="https://fern-flashcard-sumetph.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/movie.png")}
-          title="Movie"
-          frontEnd="Vue.js"
-          backBnd="-"
-          dataBase="-"
-          cssFramework="Bootstrap"
-          host="Vercel"
-          repo="https://github.com/SumetPH/movie"
-          website="https://movie-sumetph.vercel.app/"
-        />
-        <Box
-          img={require("../assets/website/todolist.png")}
-          title="TodoList"
-          frontEnd="React.js"
-          backBnd="-"
-          dataBase="-"
-          cssFramework="Materializecss"
-          host="Vercel"
-          repo="https://github.com/SumetPH/todolist"
-          website="https://todolist-sumetph.vercel.app/"
-        />
-        <Box
           img={require("../assets/website/tab.gif")}
           title="NewTab Live Wallpaper"
           frontEnd="HTML CSS JS"
