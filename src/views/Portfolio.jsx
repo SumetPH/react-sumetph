@@ -114,10 +114,12 @@ const Container = styled.div`
 const RowAnimation = keyframes`
   100% {
     margin-top: 0;
+    opacity: 1;
   }
 `;
 
 const Row = styled.div`
   animation: ${RowAnimation} 0.5s forwards;
   margin-top: 100px;
+  opacity: 0;
 `;

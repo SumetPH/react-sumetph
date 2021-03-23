@@ -1,34 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+// import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
-import styled, { keyframes } from "styled-components/macro";
-import { TweenMax, TimelineMax } from "gsap";
+import styled from "styled-components/macro";
+import { TimelineMax } from "gsap";
 
-const word =
-  "I'm looking for a job in Web Development. I'm interested Front-end, React.js, Vue.js and Back-end, Node.js, Laravel. If you looking for a Web Developer contact me, please.";
+import Personal from "../components/resume/Personal";
+import Education from "../components/resume/Education";
+import Contact from "../components/resume/Contact";
+import Qualification from "../components/resume/Qualification";
+import Award from "../components/resume/Award";
+
+// const word =
+//   "I'm looking for a job in Web Development. I'm interested Front-end, React.js, Vue.js and Back-end, Node.js, Laravel. If you looking for a Web Developer contact me, please.";
 
 export default function Home() {
-  const loadBar = useRef();
   const floatLine = useRef();
   const floatGithub = useRef();
   const floatGmail = useRef();
-  const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
-  const [btnProjectDisplay, setBtnProjectDisplay] = useState(false);
-
-  useEffect(() => {
-    if (typewriter.index < word.length) {
-      setTimeout(() => {
-        setTypewriter({
-          index: typewriter.index + 1,
-          text: typewriter.text + word.charAt(typewriter.index),
-        });
-      }, 15);
-    } else {
-      TweenMax.to(loadBar.current, 0.5, { css: { opacity: 0 } });
-      setBtnProjectDisplay(true);
-    }
-  }, [typewriter]);
 
   useEffect(() => {
     const tl = new TimelineMax({ paused: true });
@@ -48,27 +37,44 @@ export default function Home() {
 
   return (
     <div>
-      <LoadBar ref={loadBar} />
-      <Container>
-        <Content>
-          <h1 className="animate__animated animate__fadeInRight">
-            Hello, My name is SumetPH.
-          </h1>
-          <Description>
+      {/* <LoadBar ref={loadBar} /> */}
+      <div>
+        <div>
+          {/* <Description>
             <p>{typewriter.text}</p>
-          </Description>
-          <BtnProject
+          </Description> */}
+          {/* <BtnProject
             to="/portfolio"
             className="animate__animated animate__fadeIn animate__delay-1s"
             show={btnProjectDisplay ? "block" : "none"}
           >
             See all project
-          </BtnProject>
-        </Content>
-      </Container>
+          </BtnProject> */}
 
-      <Float>
-        <li>
+          <div className="flex flex-wrap justify-center sm:p-2 md:px-20 md:py-10">
+            <h1 className="font-bold text-3xl mx-auto animate__animated animate__fadeInRight">
+              Hello, My name is SumetPH.
+            </h1>
+            <div className="p-3 w-full lg:w-full">
+              <div className="w-full md:w-8/12 lg:w-6/12 xl:w-4/12 mx-auto">
+                <Personal />
+              </div>
+            </div>
+            <div className="p-3 w-full lg:w-5/12">
+              <Education />
+              <Award />
+            </div>
+            <div className="p-3 w-full lg:w-5/12">
+              <Contact />
+              <Qualification />
+            </div>
+            <div className="p-3 w-full lg:w-5/12"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="fixed left-0 bottom-3 p-0 m-0 list-none hidden md:block">
+        <li className="p-0 m-0">
           <FloatLine
             ref={floatLine}
             href="https://line.me/ti/p/notsumet1"
@@ -80,7 +86,7 @@ export default function Home() {
             </IconContext.Provider>
           </FloatLine>
         </li>
-        <li>
+        <li className="p-0 m-0">
           <FloatGithub
             ref={floatGithub}
             href="https://github.com/sumetph"
@@ -92,7 +98,7 @@ export default function Home() {
             </IconContext.Provider>
           </FloatGithub>
         </li>
-        <li>
+        <li className="p-0 m-0">
           <FloatGmail
             ref={floatGmail}
             href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=notsumet1@gmail.com"
@@ -104,77 +110,35 @@ export default function Home() {
             </IconContext.Provider>
           </FloatGmail>
         </li>
-      </Float>
+      </div>
     </div>
   );
 }
-
-const BtnProject = styled(Link)`
-  display: ${(props) => props.show};
-  border: 0;
-  border-radius: 10px;
-  background-color: #7a915f;
-  padding: 10px;
-  text-decoration: none !important;
-  &:hover {
-    color: inherit;
-  }
-`;
 
 const IconContextValue = {
   size: 30,
   style: { color: "#fefefe" },
 };
 
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const LoadBarAnimation = keyframes`
+//   30% {
+//     background-color: #2980b9;
+//   }
+//   60% {
+//     background-color: #8e44ad;
+//   }
+// `;
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.8;
-  text-align: center;
-`;
-
-const Description = styled.div`
-  width: 350px;
-`;
-
-const LoadBarAnimation = keyframes`
-  30% {
-    background-color: #2980b9;
-  }
-  60% {
-    background-color: #8e44ad;
-  }
-`;
-
-const LoadBar = styled.div`
-  position: fixed;
-  top: 99%;
-  left: 0;
-  right: 0%;
-  bottom: 0%;
-  z-index: 2;
-  background-color: #16a085;
-  animation: ${LoadBarAnimation} 2s ease-in infinite alternate-reverse;
-`;
-
-const Float = styled.ul`
-  position: fixed;
-  left: 0;
-  bottom: 3%;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  z-index: 1;
-`;
+// const LoadBar = styled.div`
+//   position: fixed;
+//   top: 99%;
+//   left: 0;
+//   right: 0%;
+//   bottom: 0%;
+//   z-index: 2;
+//   background-color: #16a085;
+//   animation: ${LoadBarAnimation} 2s ease-in infinite alternate-reverse;
+// `;
 
 const FloatLine = styled.a`
   background-color: #00ae2c;
