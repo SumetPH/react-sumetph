@@ -1,42 +1,34 @@
-import React, { useContext } from "react";
-import { AppContext } from "./Resume";
+import React from "react";
+import Card from "./_Card";
 
 function Job() {
-  const { lang } = useContext(AppContext);
   return (
-    <div className="card">
-      <header className="card-header has-background-black">
-        <p className="card-header-title has-text-white">
-          {lang === "eng" ? <span>Job Target</span> : <span>งานที่สนใจ</span>}
-        </p>
-      </header>
-      <div className="card-content" style={{ paddingLeft: 60 }}>
-        <div className="content">
-          <b>Front-end</b>
-          <ul style={{ marginTop: 0 }}>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-        <div className="content">
-          <b>Back-end</b>
-          <ul style={{ marginTop: 0 }}>
-            <li>Node.js</li>
-            <li>PHP</li>
-          </ul>
-        </div>
-        <div className="content">
-          <b>Framework & Library</b>
-          <ul style={{ marginTop: 0 }}>
-            <li>React.js</li>
-            <li>Vue.js</li>
-            <li>Express.js</li>
-            <li>Laravel</li>
-          </ul>
-        </div>
+    <Card title="Job Target">
+      <div className="mb-3">
+        <h3 className="font-bold text-lg">Front-end</h3>
+        <ul className="list-disc pl-8">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
       </div>
-    </div>
+      <div className="mb-3">
+        <h3 className="font-bold text-lg">Back-end</h3>
+        <ul className="list-disc pl-8">
+          <li>Node.js</li>
+          <li>PHP</li>
+        </ul>
+      </div>
+      <div className="mb-3">
+        <h3 className="font-bold text-lg">Framework & Library</h3>
+        <ul className="list-disc pl-8">
+          <li>React.js</li>
+          <li>Vue.js</li>
+          <li>Express.js</li>
+          <li>Laravel</li>
+        </ul>
+      </div>
+    </Card>
   );
 }
 

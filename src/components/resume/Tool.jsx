@@ -1,32 +1,37 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+import html from "./tool/html.png";
+import css from "./tool/css.png";
+import js from "./tool/js.png";
+import node from "./tool/node.png";
+import php from "./tool/php.png";
 // asset
 const data = [
   {
     name: "HTML",
     href: "https://www.w3schools.com/html",
-    src: require("../../assets/tool/html.png"),
+    src: html,
   },
   {
     name: "CSS",
     href: "https://www.w3schools.com/css",
-    src: require("../../assets/tool/css.png"),
+    src: css,
   },
   {
     name: "JS",
     href: "https://www.w3schools.com/js",
-    src: require("../../assets/tool/js.png"),
+    src: js,
   },
   {
     name: "NODE",
     href: "https://nodejs.org/",
-    src: require("../../assets/tool/node.png"),
+    src: node,
   },
   {
     name: "PHP",
     href: "https://www.php.net/",
-    src: require("../../assets/tool/php.png"),
+    src: php,
   },
 ];
 
@@ -34,15 +39,9 @@ function Tool() {
   const [hover, setHover] = useState(null);
 
   return (
-    <div
-      className="columns is-mobile is-tablet is-desktop is-multiline is-centered"
-      style={{ marginBottom: 60 }}
-    >
+    <div className="flex flex-wrap justify-center mt-10 px-18 sm:px-24 2xl:px-80">
       {data.map((item, index) => (
-        <div
-          key={index}
-          className="column is-4-mobile is-3-tablet is-2-desktop"
-        >
+        <div key={index} className="w-6/12 md:w-4/12 lg:w-2/12 p-4">
           <a
             href={item.href}
             target="_blank"
@@ -51,7 +50,11 @@ function Tool() {
             onMouseLeave={() => setHover(null)}
           >
             <LazyLoadImage
-              className={hover === item.name ? "animated pulse infinite" : ""}
+              className={
+                hover === item.name
+                  ? "animate__animated animate__pulse infinite"
+                  : ""
+              }
               src={item.src}
               effect="blur"
               alt="tool"

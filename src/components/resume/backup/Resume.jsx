@@ -3,16 +3,16 @@ import Swal from "sweetalert2";
 
 // components
 import Header from "./Header";
-import Personal from "./Personal";
-import Contact from "./Contact";
-import Job from "./Job";
-import Education from "./Education";
-import Qualification from "./Qualification";
-import Tool from "./Tool";
+import Personal from "../Personal";
+import Contact from "../Contact";
+import Job from "../Job";
+import Education from "../Education";
+import Qualification from "../Qualification";
+import Tool from "../Tool";
 // import Website from "./Website";
 import Footer from "./Footer";
-import Certificate from "./Certificate";
-import Award from "./Award";
+import Certificate from "../Certificate";
+import Award from "../Award";
 
 export const AppContext = createContext();
 

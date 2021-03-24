@@ -1,16 +1,15 @@
 import React from "react";
 
-function Header() {
+export default function Header() {
   return (
-    <div>
-      <h1 className="title is-1" style={{ marginTop: 60 }}>
-        SumetPH
+    <div className="w-full p-4">
+      <h1 className="text-center font-bold text-3xl mx-auto animate__animated animate__fadeInRight mb-1">
+        Hello, My name is SumetPH.
       </h1>
-      <p className="subtitle is-5" style={{ paddingLeft: 100 }}>
-        Resume
+      <p className="text-center w-full lg:w-5/12 xl:w-3/12 mx-auto animate__animated animate__fadeInUp">
+        I'm looking for a job in Web Development. I'm interested Front-end,
+        React.js, Vue.js and Back-end, Node.js, Laravel.
       </p>
     </div>
   );
 }
-
-export default Header;
