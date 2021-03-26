@@ -1,15 +1,17 @@
 import React from "react";
 
+import Header from "../components/resume/Header";
+import FloatSocial from "../components/resume/FloatSocial";
+
 import Personal from "../components/resume/Personal";
 import Education from "../components/resume/Education";
 import Contact from "../components/resume/Contact";
 import Qualification from "../components/resume/Qualification";
 import Award from "../components/resume/Award";
-import FloatSocial from "../components/resume/backup/FloatSocial";
 import Job from "../components/resume/Job";
 import Certificate from "../components/resume/Certificate";
 import Tool from "../components/resume/Tool";
-import Header from "../components/resume/Header";
+import Footer from "../components/resume/Footer";
 
 export default function Home() {
   return (
@@ -36,6 +38,8 @@ export default function Home() {
           <Tool />
         </div>
       </div>
+
+      <Footer />
 
       <FloatSocial />
     </div>

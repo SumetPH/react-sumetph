@@ -29,7 +29,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            sumetph.github.io
+            sumetph.tech
           </a>
         </p>
       </div>

@@ -2,28 +2,36 @@ import React, { useEffect, useRef } from "react";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
 import styled from "styled-components/macro";
-import { TimelineMax } from "gsap";
+import gsap from "gsap";
+import useScrollPosition from "@react-hook/window-scroll";
 
 export default function FloatSocial() {
   const floatLine = useRef();
   const floatGithub = useRef();
   const floatGmail = useRef();
+  const scrollY = useScrollPosition(60);
 
   useEffect(() => {
-    const tl = new TimelineMax({ paused: true });
+    if (scrollY > 0) {
+      tlm(0.3, -50);
+    } else {
+      tlm(0.3, 0);
+    }
+  }, [scrollY]);
+
+  const tlm = (duration, margin) => {
+    const tl = gsap.timeline({ defaults: { duration: duration } });
+    // const tl = new Timeline();
     tl.to(floatLine.current, {
-      duration: 0.5,
-      css: { marginLeft: 0 },
+      css: { marginLeft: margin },
     });
     tl.to(floatGithub.current, {
-      duration: 0.5,
-      css: { marginLeft: 0 },
+      css: { marginLeft: margin },
     });
     tl.to(floatGmail.current, {
-      duration: 0.5,
-      css: { marginLeft: 0 },
+      css: { marginLeft: margin },
     }).play();
-  }, []);
+  };
 
   return (
     <div className="fixed left-0 bottom-3 p-0 m-0 list-none hidden lg:block">

@@ -39,7 +39,7 @@ function Tool() {
   const [hover, setHover] = useState(null);
 
   return (
-    <div className="flex flex-wrap justify-center mt-10 px-18 sm:px-24 2xl:px-80">
+    <div className="flex flex-wrap justify-center mt-10 px-24 sm:px-32 2xl:px-80">
       {data.map((item, index) => (
         <div key={index} className="w-6/12 md:w-4/12 lg:w-2/12 p-4">
           <a

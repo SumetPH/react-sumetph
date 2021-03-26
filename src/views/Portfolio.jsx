@@ -1,19 +1,31 @@
 import React from "react";
 import Box from "../components/portfolio/Box";
-import styled, { keyframes } from "styled-components/macro";
+
+import resume from "../assets/website/resume.jpg";
+import project from "../assets/website/project.jpg";
+import restaurant from "../assets/website/restaurant.jpg";
+import isr from "../assets/website/isr.jpg";
+import twitter from "../assets/website/twitter.jpg";
+import flashcard from "../assets/website/flashcard.jpg";
+import tab from "../assets/website/tab.gif";
+import youtube from "../assets/website/youtube.gif";
 
 export default function portfolio() {
   return (
-    <Container>
-      <h1>Web Developer Portfolio</h1>
-      <b className="d-block mb-4">
+    <div className="container mx-auto text-center md:text-left">
+      <h1 className="animate__animated animate__fadeInUp font-bold text-3xl mb-1">
+        Web Developer Portfolio
+      </h1>
+      <h2 className="animate__animated animate__fadeInUp ml-3 mb-2">
         These are my projects. I created by HTML CSS JS React.js Vue.js Node.js
         PHP Laravel Bootstrap Bulma MySQL PostgreSQL MongoDB
-      </b>
-      <small className="d-block mb-2">Hover the image for information.</small>
-      <Row className="row">
+      </h2>
+      <small className="animate__animated animate__fadeInUp ml-3 mb-3 block">
+        Hover the image for information.
+      </small>
+      <div className="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4">
         <Box
-          img={require("../assets/website/resume.jpg")}
+          img={resume}
           title="SumetPH's Resume"
           frontEnd="React.js"
           backBnd="-"
@@ -24,7 +36,7 @@ export default function portfolio() {
           website="https://sumetph.github.io/"
         />
         <Box
-          img={require("../assets/website/project.jpg")}
+          img={project}
           title="DDS Rmuti"
           frontEnd="Vue.js"
           backBnd="Laravel 5.5"
@@ -35,7 +47,7 @@ export default function portfolio() {
           website="https://rmuti-dds.000webhostapp.com/"
         />
         <Box
-          img={require("../assets/website/isr.jpg")}
+          img={isr}
           title="ISR Rmuti"
           frontEnd="Next.js"
           backBnd="Node.js"
@@ -46,7 +58,7 @@ export default function portfolio() {
           website="https://next-isr.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/restaurant.jpg")}
+          img={restaurant}
           title="CRUD Restaurant"
           frontEnd="Vue.js"
           backBnd="Golang"
@@ -57,7 +69,7 @@ export default function portfolio() {
           website="https://go-restaurant-sumetph.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/twitter.jpg")}
+          img={twitter}
           title="Twitter Stream"
           frontEnd="HTML CSS JS"
           backBnd="Node.js"
@@ -68,7 +80,7 @@ export default function portfolio() {
           website="https://node-twitter-stream-sumetph.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/flashcard.jpg")}
+          img={flashcard}
           title="Flashcard"
           frontEnd="React.js"
           backBnd="Node.js"
@@ -79,7 +91,7 @@ export default function portfolio() {
           website="https://fern-flashcard-sumetph.herokuapp.com/"
         />
         <Box
-          img={require("../assets/website/tab.gif")}
+          img={tab}
           title="NewTab Live Wallpaper"
           frontEnd="HTML CSS JS"
           backBnd="-"
@@ -89,7 +101,7 @@ export default function portfolio() {
           repo="https://github.com/SumetPH/chrome-extension-newtab-live-wallpaper"
         />
         <Box
-          img={require("../assets/website/youtube.gif")}
+          img={youtube}
           title="Youtube Comment Switcher"
           frontEnd="jQuery"
           backBnd="-"
@@ -98,28 +110,7 @@ export default function portfolio() {
           host="Github"
           repo="https://github.com/SumetPH/chrome-extension-youtube-comment-switcher"
         />
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
-
-const Container = styled.div`
-  padding: 100px 20%;
-  @media (max-width: 1200px) {
-    padding: 100px 10%;
-    height: auto;
-  }
-`;
-
-const RowAnimation = keyframes`
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-`;
-
-const Row = styled.div`
-  animation: ${RowAnimation} 0.5s forwards;
-  margin-top: 100px;
-  opacity: 0;
-`;
