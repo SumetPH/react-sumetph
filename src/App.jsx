@@ -1,30 +1,32 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loading from "./components/app/Loading";
 
 const Nav = lazy(() => import("./components/app/Nav"));
 const Resume = lazy(() => import("./views/Resume"));
 const Portfolio = lazy(() => import("./views/Portfolio"));
-const Contact = lazy(() => import("./views/Contact"));
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem("theme", "dark");
+  }, []);
+
   return (
-    <Router>
-      <Suspense fallback={<Loading />}>
-        <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Resume />
-          </Route>
-          <Route path="/portfolio">
-            <Portfolio />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-      </Suspense>
-    </Router>
+    <div className="dark:bg-gray-900 dark:text-gray-200">
+      <Router>
+        <Suspense fallback={<Loading />}>
+          <Nav />
+          <Switch>
+            <Route exact path="/">
+              <Resume />
+            </Route>
+            <Route path="/portfolio">
+              <Portfolio />
+            </Route>
+          </Switch>
+        </Suspense>
+      </Router>
+    </div>
   );
 }
 

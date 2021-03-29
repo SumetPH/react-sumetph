@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 import "./css/tailwind.css";
-import "./css/style.css";
 import "./css/animate.min.css";
 
 ReactDOM.render(

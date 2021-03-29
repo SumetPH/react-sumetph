@@ -39,14 +39,14 @@ export default function Box({
           ) : null}
         </UL>
       </Cover>
-      <Info>
-        {title ? <h5>{title}</h5> : null}
+      <div className="w-11/12 bg-gray-200 dark:bg-gray-800 py-8 rounded-xl text-center mx-auto -m-5 mb-2">
+        {title ? <h3 className="font-bold text-lg">{title}</h3> : null}
         {frontEnd ? <Span>Front-End : {frontEnd}</Span> : null}
         {backBnd ? <Span>Back-End : {backBnd}</Span> : null}
         {dataBase ? <Span>Database : {dataBase}</Span> : null}
         {cssFramework ? <Span>CSS : {cssFramework}</Span> : null}
         {host ? <Span>Host : {host}</Span> : null}
-      </Info>
+      </div>
     </Container>
   );
 }
@@ -103,15 +103,15 @@ const BtnWebsite = styled(BtnRepo)`
   }
 `;
 
-const Info = styled.div`
-  background-color: #34495e;
-  width: 90%;
-  height: 200px;
-  padding: 40px 0px 15px 0px;
-  margin: -20px auto 20px auto;
-  border-radius: 16px;
-  text-align: center;
-`;
+// const Info = styled.div`
+//   background-color: #34495e;
+//   width: 90%;
+//   height: 200px;
+//   padding: 40px 0px 15px 0px;
+//   margin: -20px auto 20px auto;
+//   border-radius: 16px;
+//   text-align: center;
+// `;
 
 const Container = styled.div`
   &:hover ${UL} {

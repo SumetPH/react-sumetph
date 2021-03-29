@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components/macro";
 
 export default function Loading() {
   return (
-    <Container>
+    <Container className="dark:bg-gray-900">
       <Circle>
         <Square />
       </Circle>

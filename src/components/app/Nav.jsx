@@ -7,31 +7,18 @@ export default function Nav() {
   return (
     <div className="w-full p-3">
       <ul className="flex justify-center md:justify-end ">
-        <li className="bg-gray-500 px-2 py-1 m-1 rounded-md">
-          <Link
-            className="hover:no-underline hover:text-white"
-            location={location}
-            to="/"
-          >
+        <li className="bg-gray-200 dark:bg-gray-700 px-2 py-1 m-1 rounded-md">
+          <Link className="hover:no-underline " location={location} to="/">
             Home
           </Link>
         </li>
-        <li className="bg-gray-500 px-2 py-1 m-1 rounded-md">
+        <li className="bg-gray-200 dark:bg-gray-700 px-2 py-1 m-1 rounded-md">
           <Link
-            className="hover:no-underline hover:text-white"
+            className="hover:no-underline"
             location={location}
             to="/portfolio"
           >
             Portfolio
-          </Link>
-        </li>
-        <li className="bg-gray-500 px-2 py-1 m-1 rounded-md">
-          <Link
-            className="hover:no-underline hover:text-white"
-            location={location}
-            to="/contact"
-          >
-            Contact
           </Link>
         </li>
       </ul>
