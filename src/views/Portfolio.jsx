@@ -24,17 +24,17 @@ export default function portfolio() {
         Hover the image for information.
       </small>
       <div className="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Box
-          img={resume}
-          title="SumetPH's Resume"
-          frontEnd="React.js"
-          backBnd="-"
-          dataBase="-"
-          cssFramework="Bulma"
-          host="Github"
-          repo="https://github.com/SumetPH/react-resume"
-          website="https://sumetph.github.io/"
-        />
+//         <Box
+//           img={resume}
+//           title="SumetPH's Resume"
+//           frontEnd="React.js"
+//           backBnd="-"
+//           dataBase="-"
+//           cssFramework="Bulma"
+//           host="Github"
+//           repo="https://github.com/SumetPH/react-resume"
+//           website="https://sumetph.github.io/"
+//         />
         <Box
           img={project}
           title="DDS Rmuti"
@@ -90,16 +90,16 @@ export default function portfolio() {
           repo="https://github.com/SumetPH/fern-flashcard"
           website="https://fern-flashcard-sumetph.herokuapp.com/"
         />
-        <Box
-          img={tab}
-          title="NewTab Live Wallpaper"
-          frontEnd="HTML CSS JS"
-          backBnd="-"
-          dataBase="-"
-          cssFramework="-"
-          host="Github"
-          repo="https://github.com/SumetPH/chrome-extension-newtab-live-wallpaper"
-        />
+//         <Box
+//           img={tab}
+//           title="NewTab Live Wallpaper"
+//           frontEnd="HTML CSS JS"
+//           backBnd="-"
+//           dataBase="-"
+//           cssFramework="-"
+//           host="Github"
+//           repo="https://github.com/SumetPH/chrome-extension-newtab-live-wallpaper"
+//         />
         <Box
           img={youtube}
           title="Youtube Comment Switcher"
