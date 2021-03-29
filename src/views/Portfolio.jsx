@@ -2,12 +2,12 @@ import React from "react";
 import Box from "../components/portfolio/Box";
 
 import resume from "../assets/website/resume.jpg";
-import project from "../assets/website/project.jpg";
+// import project from "../assets/website/project.jpg";
 import restaurant from "../assets/website/restaurant.jpg";
 import isr from "../assets/website/isr.jpg";
 import twitter from "../assets/website/twitter.jpg";
 import flashcard from "../assets/website/flashcard.jpg";
-import tab from "../assets/website/tab.gif";
+// import tab from "../assets/website/tab.gif";
 import youtube from "../assets/website/youtube.gif";
 
 export default function portfolio() {
@@ -24,18 +24,18 @@ export default function portfolio() {
         Hover the image for information.
       </small>
       <div className="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4">
-//         <Box
-//           img={resume}
-//           title="SumetPH's Resume"
-//           frontEnd="React.js"
-//           backBnd="-"
-//           dataBase="-"
-//           cssFramework="Bulma"
-//           host="Github"
-//           repo="https://github.com/SumetPH/react-resume"
-//           website="https://sumetph.github.io/"
-//         />
         <Box
+          img={resume}
+          title="SumetPH's Resume"
+          frontEnd="React.js"
+          backBnd="-"
+          dataBase="-"
+          cssFramework="Bulma"
+          host="Github"
+          repo="https://github.com/SumetPH/react-resume"
+          website="https://sumetph.github.io/"
+        />
+        {/* <Box
           img={project}
           title="DDS Rmuti"
           frontEnd="Vue.js"
@@ -45,7 +45,7 @@ export default function portfolio() {
           host="000webhostapp"
           repo="https://github.com/SumetPH/laravel-graduation-project"
           website="https://rmuti-dds.000webhostapp.com/"
-        />
+        /> */}
         <Box
           img={isr}
           title="ISR Rmuti"
@@ -90,16 +90,16 @@ export default function portfolio() {
           repo="https://github.com/SumetPH/fern-flashcard"
           website="https://fern-flashcard-sumetph.herokuapp.com/"
         />
-//         <Box
-//           img={tab}
-//           title="NewTab Live Wallpaper"
-//           frontEnd="HTML CSS JS"
-//           backBnd="-"
-//           dataBase="-"
-//           cssFramework="-"
-//           host="Github"
-//           repo="https://github.com/SumetPH/chrome-extension-newtab-live-wallpaper"
-//         />
+        {/* <Box
+           img={tab}
+           title="NewTab Live Wallpaper"
+           frontEnd="HTML CSS JS"
+           backBnd="-"
+           dataBase="-"
+           cssFramework="-"
+           host="Github"
+           repo="https://github.com/SumetPH/chrome-extension-newtab-live-wallpaper"
+         /> */}
         <Box
           img={youtube}
           title="Youtube Comment Switcher"
