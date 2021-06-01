@@ -8,7 +8,8 @@ const Portfolio = lazy(() => import("./views/Portfolio"));
 
 function App() {
   useEffect(() => {
-    localStorage.setItem("theme", "dark");
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
   }, []);
 
   return (

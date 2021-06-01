@@ -15,7 +15,7 @@ export default function Box({
 }) {
   return (
     <Container className="mb-4">
-      <Cover img={img}>
+      <Cover className="border-8 dark:border-gray-700" img={img}>
         <UL>
           {repo ? (
             <LI>
@@ -55,7 +55,6 @@ const Cover = styled.div`
   background-image: url(${(props) => props.img});
   background-size: cover;
   padding-top: 56.25%;
-  border: 5px solid #34495e;
   border-radius: 18px;
   position: relative;
   width: 100%;
@@ -73,7 +72,8 @@ const UL = styled.ul`
   list-style-type: none;
   justify-content: center;
   align-items: center;
-  background-color: #34495eda;
+  border-radius: 10px;
+  background-color: #374151da;
   opacity: 0;
   transition: all 0.2s ease-in;
 `;

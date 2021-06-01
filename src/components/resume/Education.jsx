@@ -1,10 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import { FaGraduationCap } from "react-icons/fa";
 import Card from "./_Card";
 
 function Education() {
-  const theme = useRef(localStorage.getItem("theme"));
+  const bgColor = () => {
+    if (localStorage.theme === "dark") {
+      return "red";
+    } else {
+      return "white";
+    }
+  };
 
   return (
     <Card title="Education">
@@ -14,7 +20,7 @@ function Education() {
           icon={<FaGraduationCap />}
           iconColor="#4a4a4a"
           contentStyle={{
-            backgroundColor: theme.current === "dark" && "rgba(55, 65, 81)",
+            backgroundColor: bgColor,
             borderRadius: 8,
           }}
         >
@@ -30,7 +36,7 @@ function Education() {
           icon={<FaGraduationCap />}
           iconColor="#4a4a4a"
           contentStyle={{
-            backgroundColor: theme.current === "dark" && "rgba(55, 65, 81)",
+            backgroundColor: bgColor,
             borderRadius: 8,
           }}
         >
