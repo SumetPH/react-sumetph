@@ -9,6 +9,7 @@ import flashcard from "../components/portfolio/website/flashcard.jpg";
 import youtube from "../components/portfolio/website/youtube.gif";
 import todolist from "../components/portfolio/website/todolist.png";
 import movie from "../components/portfolio/website/movie.png";
+import covid from "../components/portfolio/website/covid.png";
 
 export default function portfolio() {
   return (
@@ -111,6 +112,23 @@ export default function portfolio() {
           host="Github"
           repo="https://github.com/SumetPH/chrome-extension-youtube-comment-switcher"
         />
+        <div className="col-span-full">
+          <div className="grid md:grid-cols-4">
+            <div className="md:col-start-2 md:col-end-4">
+              <Box
+                img={covid}
+                title="Covid 19 API"
+                frontEnd="Vue.js"
+                backBnd="-"
+                dataBase="-"
+                cssFramework="Bootstrap"
+                host="Vercel"
+                repo="https://github.com/SumetPH/covid-19-api"
+                website="https://covid-19-api-sumetph.vercel.app"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

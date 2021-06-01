@@ -8,7 +8,7 @@ export default function Header() {
       </h1>
       <p className="text-center w-full lg:w-5/12 xl:w-3/12 mx-auto animate__animated animate__fadeInUp">
         I'm looking for a job in Web Development. I'm interested Front-end,
-        React.js, Vue.js and Back-end, Node.js, Laravel.
+        React.js, Vue.js and Back-end, Node.js.
       </p>
     </div>
   );
