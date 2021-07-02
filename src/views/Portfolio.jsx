@@ -11,6 +11,8 @@ import todolist from "../components/portfolio/website/todolist.png";
 import movie from "../components/portfolio/website/movie.png";
 import covid from "../components/portfolio/website/covid.png";
 
+import { url } from "../config/url";
+
 export default function portfolio() {
   return (
     <div className="container mx-auto text-center md:text-left">
@@ -34,7 +36,7 @@ export default function portfolio() {
           cssFramework="Bootstrap"
           host="000webhostapp"
           repo="https://github.com/SumetPH/laravel-graduation-project"
-          website="https://dds-rmuti-sumetph.000webhostapp.com/"
+          website={url.project}
         />
         <Box
           img={isr}
@@ -45,7 +47,7 @@ export default function portfolio() {
           cssFramework="Bulma"
           host="Heroku"
           repo="https://github.com/SumetPH/next-isr"
-          website="https://next-isr.herokuapp.com/"
+          website={url.isr}
         />
         <Box
           img={restaurant}
@@ -56,7 +58,7 @@ export default function portfolio() {
           cssFramework="Bootstrap"
           host="Heroku"
           repo="https://github.com/SumetPH/go-restaurant"
-          website="https://go-restaurant-sumetph.herokuapp.com/"
+          website={url.restaurant}
         />
         <Box
           img={twitter}
@@ -67,7 +69,7 @@ export default function portfolio() {
           cssFramework="Bootstrap"
           host="Heroku"
           repo="https://github.com/SumetPH/node-twitter-stream"
-          website="https://node-twitter-stream-sumetph.herokuapp.com/"
+          website={url.twitter}
         />
         <Box
           img={flashcard}
@@ -78,7 +80,7 @@ export default function portfolio() {
           cssFramework="Bulma"
           host="Heroku"
           repo="https://github.com/SumetPH/fern-flashcard"
-          website="https://fern-flashcard-sumetph.herokuapp.com/"
+          website={url.flashcard}
         />
         <Box
           img={todolist}
@@ -89,7 +91,7 @@ export default function portfolio() {
           cssFramework="Materialize"
           host="Vercel"
           repo="https://github.com/SumetPH/todolist"
-          website="https://todolist-sumetph.vercel.app"
+          website={url.todolist}
         />
         <Box
           img={movie}
@@ -100,7 +102,7 @@ export default function portfolio() {
           cssFramework="Bootstrap"
           host="Vercel"
           repo="https://github.com/SumetPH/movie"
-          website="https://movie-sumetph.vercel.app"
+          website={url.movie}
         />
         <Box
           img={youtube}
@@ -124,7 +126,7 @@ export default function portfolio() {
                 cssFramework="Bootstrap"
                 host="Vercel"
                 repo="https://github.com/SumetPH/covid-19-api"
-                website="https://covid-19-api-sumetph.vercel.app"
+                website={url.covid}
               />
             </div>
           </div>
