@@ -25,11 +25,11 @@ function Contact() {
           Portfolio :{" "}
           <a
             className="hover:text-white"
-            href="https://sumetph.tech"
+            href="https://sumetph.github.io"
             target="_blank"
             rel="noopener noreferrer"
           >
-            sumetph.tech
+            sumetph.github.io
           </a>
         </p>
       </div>
