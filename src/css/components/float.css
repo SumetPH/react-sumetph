@@ -1,0 +1,35 @@
+.float-line {
+  background-color: #00ae2c;
+  display: inline-block;
+  padding: 10px;
+  margin-left: -50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.float-line:hover {
+  padding-left: 30px;
+}
+
+.float-github {
+  background-color: #4e545a;
+  display: inline-block;
+  padding: 10px;
+  margin-left: -50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.float-github:hover {
+  padding-left: 30px;
+}
+
+.float-gmail {
+  background-color: #c2392a;
+  display: inline-block;
+  padding: 10px;
+  margin-left: -50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.float-gmail:hover {
+  padding-left: 30px;
+}

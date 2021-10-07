@@ -1,10 +1,8 @@
-import React from "react";
-
 import c1 from "./certificate/ic3_1.jpg";
 import c2 from "./certificate/ic3_2.jpg";
-import Card from "./_Card";
+import Card from "../_Card";
 
-function Certificate() {
+const Certificate = () => {
   return (
     <Card title="Certificate">
       <div className="">
@@ -18,6 +16,6 @@ function Certificate() {
       </div>
     </Card>
   );
-}
+};
 
 export default Certificate;

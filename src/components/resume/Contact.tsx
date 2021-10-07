@@ -1,7 +1,6 @@
-import React from "react";
 import Card from "./_Card";
 
-function Contact() {
+const Contact = () => {
   return (
     <Card title="Contact">
       <div className="mb-2">
@@ -35,6 +34,6 @@ function Contact() {
       </div>
     </Card>
   );
-}
+};
 
 export default Contact;

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Nav() {
-  const location = useLocation();
-  const [theme, setTheme] = useState("dark");
+const Nav = () => {
+  const [theme, setTheme] = useState<string>("dark");
 
   const toggleTheme = () => {
     if (theme === "dark") {
@@ -36,16 +35,12 @@ export default function Nav() {
         </div>
         <div className="flex">
           <li className="bg-gray-200 dark:bg-gray-700 px-2 py-1 m-1 rounded-md">
-            <Link className="hover:no-underline " location={location} to="/">
+            <Link className="hover:no-underline " to="/">
               Home
             </Link>
           </li>
           <li className="bg-gray-200 dark:bg-gray-700 px-2 py-1 m-1 rounded-md">
-            <Link
-              className="hover:no-underline"
-              location={location}
-              to="/portfolio"
-            >
+            <Link className="hover:no-underline" to="/portfolio">
               Portfolio
             </Link>
           </li>
@@ -53,4 +48,6 @@ export default function Nav() {
       </ul>
     </div>
   );
-}
+};
+
+export default Nav;

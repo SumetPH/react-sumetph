@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Header() {
+const Header = () => {
   return (
     <div className="w-full p-4">
       <h1 className="text-center font-bold text-3xl mx-auto animate__animated animate__fadeInRight mb-1">
@@ -12,4 +10,6 @@ export default function Header() {
       </p>
     </div>
   );
-}
+};
+
+export default Header;

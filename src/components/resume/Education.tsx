@@ -1,9 +1,8 @@
-import React from "react";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import { FaGraduationCap } from "react-icons/fa";
 import Card from "./_Card";
 
-function Education() {
+const Education = () => {
   const bgColor = () => {
     if (localStorage.theme === "dark") {
       return "red";
@@ -51,6 +50,6 @@ function Education() {
       </Timeline>
     </Card>
   );
-}
+};
 
 export default Education;

@@ -1,7 +1,6 @@
-import React from "react";
 import { FaGithubAlt } from "react-icons/fa";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="w-full mt-20 py-10 bg-gray-200 dark:bg-gray-800">
       <div className="flex justify-center">
@@ -20,6 +19,6 @@ function Footer() {
       </small>
     </footer>
   );
-}
+};
 
 export default Footer;

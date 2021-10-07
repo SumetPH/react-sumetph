@@ -1,7 +1,6 @@
-import React from "react";
-import Card from "./_Card";
+import Card from "../_Card";
 
-function Award() {
+const Award = () => {
   return (
     <Card title="Award">
       <ul>
@@ -21,6 +20,6 @@ function Award() {
       </ul>
     </Card>
   );
-}
+};
 
 export default Award;

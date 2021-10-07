@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "../components/portfolio/Box";
 
 import project from "../components/portfolio/website/project.jpg";
@@ -13,7 +12,8 @@ import covid from "../components/portfolio/website/covid.png";
 
 import { url } from "../config/url";
 
-export default function portfolio() {
+const Portfolio = () => {
+  console.log(youtube, "y");
   return (
     <div className="container mx-auto text-center md:text-left">
       <h1 className="animate__animated animate__fadeInUp font-bold text-3xl mb-1">
@@ -113,6 +113,7 @@ export default function portfolio() {
           cssFramework="-"
           host="Github"
           repo="https://github.com/SumetPH/chrome-extension-youtube-comment-switcher"
+          website=""
         />
         <div className="col-span-full">
           <div className="grid md:grid-cols-4">
@@ -134,4 +135,6 @@ export default function portfolio() {
       </div>
     </div>
   );
-}
+};
+
+export default Portfolio;

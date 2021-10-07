@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
-import styled from "styled-components/macro";
 import gsap from "gsap";
 import useScrollPosition from "@react-hook/window-scroll";
 
-export default function FloatSocial() {
+const FloatSocial = () => {
   const floatLine = useRef();
   const floatGithub = useRef();
   const floatGmail = useRef();
@@ -21,7 +20,6 @@ export default function FloatSocial() {
 
   const tlm = (duration, margin) => {
     const tl = gsap.timeline({ defaults: { duration: duration } });
-    // const tl = new Timeline();
     tl.to(floatLine.current, {
       css: { marginLeft: margin },
     });
@@ -36,7 +34,8 @@ export default function FloatSocial() {
   return (
     <div className="fixed left-0 bottom-3 p-0 m-0 list-none hidden lg:block">
       <li className="p-0 m-0">
-        <FloatLine
+        <a
+          className="float-line"
           ref={floatLine}
           href="https://line.me/ti/p/notsumet1"
           target="_blank"
@@ -45,10 +44,11 @@ export default function FloatSocial() {
           <IconContext.Provider value={IconContextValue}>
             <FaLine />
           </IconContext.Provider>
-        </FloatLine>
+        </a>
       </li>
       <li className="p-0 m-0">
-        <FloatGithub
+        <a
+          className="float-github"
           ref={floatGithub}
           href="https://github.com/sumetph"
           target="_blank"
@@ -57,10 +57,11 @@ export default function FloatSocial() {
           <IconContext.Provider value={IconContextValue}>
             <FaGithubAlt />
           </IconContext.Provider>
-        </FloatGithub>
+        </a>
       </li>
       <li className="p-0 m-0">
-        <FloatGmail
+        <a
+          className="float-gmail"
           ref={floatGmail}
           href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=notsumet1@gmail.com"
           target="_blank"
@@ -69,32 +70,15 @@ export default function FloatSocial() {
           <IconContext.Provider value={IconContextValue}>
             <FaEnvelope />
           </IconContext.Provider>
-        </FloatGmail>
+        </a>
       </li>
     </div>
   );
-}
+};
 
 const IconContextValue = {
   size: 30,
   style: { color: "#fefefe" },
 };
 
-const FloatLine = styled.a`
-  background-color: #00ae2c;
-  display: inline-block;
-  padding: 10px;
-  margin-left: -50px;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    padding-left: 30px;
-  }
-`;
-
-const FloatGithub = styled(FloatLine)`
-  background-color: #4e545a;
-`;
-
-const FloatGmail = styled(FloatLine)`
-  background-color: #c2392a;
-`;
+export default FloatSocial;

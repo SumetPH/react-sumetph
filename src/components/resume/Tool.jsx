@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import html from "./tool/html.png";
@@ -35,7 +35,7 @@ const data = [
   },
 ];
 
-function Tool() {
+const Tool = () => {
   const [hover, setHover] = useState(null);
 
   return (
@@ -64,6 +64,6 @@ function Tool() {
       ))}
     </div>
   );
-}
+};
 
 export default Tool;
