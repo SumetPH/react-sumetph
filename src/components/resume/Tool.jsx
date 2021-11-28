@@ -5,7 +5,6 @@ import html from "./tool/html.png";
 import css from "./tool/css.png";
 import js from "./tool/js.png";
 import node from "./tool/node.png";
-import php from "./tool/php.png";
 // asset
 const data = [
   {
@@ -27,11 +26,6 @@ const data = [
     name: "NODE",
     href: "https://nodejs.org/",
     src: node,
-  },
-  {
-    name: "PHP",
-    href: "https://www.php.net/",
-    src: php,
   },
 ];
 
