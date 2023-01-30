@@ -4,7 +4,6 @@ import FloatSocial from "../components/resume/FloatSocial";
 import Personal from "../components/resume/Personal";
 import Education from "../components/resume/Education";
 import Contact from "../components/resume/Contact";
-import Qualification from "../components/resume/Qualification";
 import Job from "../components/resume/Job";
 import Tool from "../components/resume/Tool";
 import Footer from "../components/resume/Footer";
@@ -27,7 +26,6 @@ const Resume = () => {
         </div>
         <div className="w-full lg:w-5/12">
           <Contact />
-          <Qualification />
           <Job />
         </div>
         <div className="w-full">

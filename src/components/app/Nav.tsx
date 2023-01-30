@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Nav = () => {
   const [theme, setTheme] = useState<string>("dark");
@@ -32,18 +31,6 @@ const Nav = () => {
               }`}
             ></div>
           </div>
-        </div>
-        <div className="flex">
-          <li className="bg-gray-200 dark:bg-gray-700 px-2 py-1 m-1 rounded-md">
-            <Link className="hover:no-underline " to="/">
-              Home
-            </Link>
-          </li>
-          <li className="bg-gray-200 dark:bg-gray-700 px-2 py-1 m-1 rounded-md">
-            <Link className="hover:no-underline" to="/portfolio">
-              Portfolio
-            </Link>
-          </li>
         </div>
       </ul>
     </div>

@@ -8,9 +8,4 @@ import "./css/components/box.css";
 import "./css/components/float.css";
 import "./css/components/loading.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
